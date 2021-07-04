@@ -1,0 +1,279 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>KID Friendly - Cyber Bullying</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Internet safety tool for parents" />
+    <meta name="keywords" content="internet safety, children, strangers, advice, information, cyber bullying" />
+
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="styles/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="styles/icomoon.css">
+    <!-- Themify Icons-->
+    <link rel="stylesheet" href="styles/themify-icons.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="styles/bootstrap.css">
+
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="styles/owl.carousel.min.css">
+    <link rel="stylesheet" href="styles/owl.theme.default.min.css">
+
+    <!-- Theme styles  -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="styles/StyleSheet.css" rel="stylesheet" />
+
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+   
+
+    <script>
+        // Initialize Firebase
+        var config = {
+    apiKey: "AIzaSyBgO9w0fHIK2mB7oCD1O4bIe_LvA76Ov_w",
+    authDomain: "cybernetty-df98a.firebaseapp.com",
+    projectId: "cybernetty-df98a",
+    databaseURL:'https://cybernetty-df98a-default-rtdb.firebaseio.com',
+    storageBucket: "cybernetty-df98a.appspot.com",
+    messagingSenderId: "480836825199",
+    appId: "1:480836825199:web:2b95733fec458f4c8b5d9a",
+    measurementId: "G-CGEQ7VM9T9"
+  };
+        firebase.initializeApp(config);
+    </script>
+   <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase.js"></script>
+
+   <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+   
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118121632-1');
+    </script>
+
+</head>
+
+<body onload="setUpListeners()">
+
+    <div class="gtco-loader"></div>
+
+    <div id="page">
+
+        <nav class="gtco-nav" role="navigation">
+            <div class="gtco-container">
+
+                <div class="row">
+                    <div class="col-sm-2 col-xs-12">
+                        <div id="gtco-logo">
+                            <a href="index.html">KID Friendly</div>
+                    </div>
+                    <div class="col-xs-10 text-right menu-1">
+                        <ul>
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="page-about.html">About KID Friendly</a>
+                            </li>
+                            <li id="loggedIn" class="has-dropdown">
+                                <a href="#">Parent Dashboard</a>
+                                <ul class="dropdown">
+                                    <li><a id="create" href="page-create-activities.html">Create Activity</a></li>
+                                    <li>
+                                        <a id="progress" href="page-progress.html">Progress</a>
+                                    </li>
+                                    <li>
+                                        <a id="activities" href="page-activities.html">Activities</a>
+                                    </li>
+                                    <li>
+                                        <a id="btnLogout" href="index.html">Log Out</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            </li>
+                            <li>
+                                <a id="joinNetty" class="join hide" href="page-authenticate.html">Join Friendly</a>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </nav>
+
+        <div class="gtco-section">
+            <div class="gtco-container">
+                <div class="row gtco-heading">
+                    <div class="col-md-12 text-left">
+                        <h2>Cyber Bullying</h2>
+                        <p>Cyberbullying is bullying that takes place over digital devices like cell phones, computers, and tablets. Cyberbullying can occur through SMS, Text, and apps, or online in social media, forums, or gaming where people can view,
+                            participate in, or share content. Cyberbullying includes sending, posting, or sharing negative, harmful, false, or mean content about someone else. It can include sharing personal or private information about someone else causing
+                            embarrassment or humiliation. Some cyberbullying crosses the line into unlawful or criminal behavior.</p>
+
+                        <p>The most common places where cyberbullying occurs are:</p>
+
+                        <p>
+                            <ul>
+                                <li>Social Media, such as Facebook, Instagram, Snapchat, and Twitter</li>
+                                <li>SMS (Short Message Service) also known as Text Message sent through devices</li>
+                                <li>Instant Message (via devices, email provider services, apps, and social media messaging features)</li>
+                                <li>Email</li>
+                            </ul>
+                        </p>
+                        <hr>
+                        <h3>Preventing Cyber Bullying</h3>
+                        <p>
+                            <ul>
+                                <li>Talk to your child about cyber bullying before it happens and work out strategies you're both comfortable with.</li>
+                                <li>Reassure your child you won't disconnect them from their online world.</li>
+                                <li>Advise them not to respond to negative messages but to save them - and the details of the sender.</li>
+                            </ul>
+                        </p>
+                        <hr>
+                        <h3>Tips for Personal Safety</h3>
+                        <p>
+                            <ul>
+                                <li>Remind your child that not everyone is who they claim to be online, and to never add unknown people to "friends" lists.</li>
+                                <li>Encourage your child not to post phone numbers online.</li>
+                                <li>Warn them never to post personal details online and to carefully consider which photos to upload.</li>
+                                <li>Ensure they maximise privacy settings on social networking sites.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- END  -->`
+
+        <div class="gtco-section gto-features">
+            <div class="gtco-container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="feature-left">
+                            <i class="fa fa-ban icon"></i>
+                            <div class="copy info-links">
+                                <h3>Cyber Bullying</h3>
+                                <p>Learn more about cyber bullying, how to prevent your child from being bullied online, and what to do if your child is being cyber bullied.</p>
+                                <p>
+                                    <a href="cyberbullying.html" class="gtco-more">Continue Reading..</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                 
+                    <div class="col-md-4">
+                        <div class="feature-left">
+                            <i class="fa fa-check-square-o icon"></i>
+                            <div class="copy info-links">
+                                <h3>Tips for Parents</h3>
+                                <p>The Internet is a wonderful resource, but access to it has its hazards for kids. Here's how to make sure your kids go online safely.</p>
+                                <p>
+                                    <a href="tipsandadvice.html" class="gtco-more">Continue Reading..</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="gtco-footer" class="gtco-section" role="contentinfo">
+            <div class="gtco-container">
+                <div class="row row-pb-md">
+                    <div class="col-md-4 gtco-widget gtco-footer-paragraph">
+                        <h3>KID Friendly</h3>
+                        <p>Bridging the gap between parents, children and the internet. Helping raise internet safety awareness.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-6 gtco-footer-link">
+                                <h3>Links</h3>
+                                <ul class="gtco-list-link">
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="page-about.html">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="cyberbullying.html">Cyber Bullying</a>
+                                    </li>
+                                  
+                                    <li>
+                                        <a href="tipsandadvice.html">Tips for Parents</a>
+                                    </li>
+                                    <li>
+                                        <li>
+                                            <a href="page-activities.html">Activities</a>
+                                        </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gtco-footer-subscribe">
+                        <div class="item">
+                            <div class="gtco-staff">
+                                <ul class="fh5co-social">
+                                    <li><a href="#"><i class="icon-facebook"></i></a></li>
+                                    <li><a href="https://twitter.com/SuryaPr09062449"><i class="icon-twitter"></i></a></li>
+                                    <li><a href="#"><i class="icon-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gtco-copyright">
+                <div class="gtco-container">
+                    <div class="row">
+                        <div class="col-md-6 text-left">
+                            <p>
+                                <small>&copy; Copyright 2021</small>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- END footer -->
+
+        </div>
+
+        <div class="gototop js-top">
+            <a href="#" class="js-gotop">
+                <i class="icon-arrow-up"></i>
+            </a>
+        </div>
+
+        <!-- jQuery -->
+        <script src="js/jquery.min.js"></script>
+        <!-- jQuery Easing -->
+        <script src="js/jquery.easing.1.3.js"></script>
+        <!-- Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Waypoints -->
+        <script src="js/jquery.waypoints.min.js"></script>
+        <!-- Carousel -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- Main -->
+        <script src="js/main.js"></script>
+
+</body>
+
+</html>

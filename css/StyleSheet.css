@@ -1,0 +1,660 @@
+/*StyleSheet*/
+
+
+/* Background blue = #81dbfe */
+
+.main {
+    background-color: white;
+    border-radius: 25px;
+    border: palevioletred 2px dotted;
+}
+
+body {
+    background-image: url(../images/Background_1.png);
+    /*background-position: center center;*/
+    /* Opera */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-color: #999;*/
+    -webkit-background-size: cover;
+    /* For WebKit */
+    -moz-background-size: cover;
+    /* Mozilla */
+    -o-background-size: cover;
+}
+
+.jumbotron {
+    margin-top: 180px;
+}
+
+
+/*form {
+    text-align: left;
+    position: relative;
+    padding: 30px;
+    width: 800px;
+    height: 360px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 25px;
+    opacity: 0.7;
+}*/
+
+.loginBack {
+    text-align: left;
+    position: relative;
+    padding: 30px;
+    width: 800px;
+    height: 280px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 25px;
+    opacity: 0.7;
+}
+
+.signupBack {
+    text-align: left;
+    position: relative;
+    padding: 30px;
+    width: 800px;
+    height: 520px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 25px;
+    opacity: 0.7;
+    margin-bottom: 10px;
+}
+
+.activeBack {
+    text-align: left;
+    position: relative;
+    padding: 30px;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 25px;
+    opacity: 0.7;
+    margin-bottom: 120px;
+}
+
+.errorBack {
+    /*text-align: center;*/
+    position: relative;
+    padding: 30px;
+    width: 800px;
+    height: 320px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 25px;
+    opacity: 0.7;
+    margin-bottom: 10px;
+    margin-top: 100px;
+}
+
+.form-control {
+    height: 60px;
+    /*font-size: 28px;*/
+    border: 3px solid #555;
+}
+
+h1 {
+    font-size: 50px;
+    /*position : absolute;
+  	left : 320px;
+  	top  : 85px;*/
+    font: sans-serif;
+    /*text-align: center;*/
+}
+
+#btnReturn {
+    position: absolute;
+    margin-left: 300px;
+    color: black;
+    font-weight: bold;
+}
+
+.button {
+    /*position: absolute;*/
+    left: 50%;
+    display: block;
+    margin: 0 auto;
+    /*margin-left: 340px;*/
+    color: black;
+    font-weight: bold;
+}
+
+#para {
+    font-size: 30px;
+    position: relative;
+    width: 740px;
+    height: 800px;
+    margin: 0 auto;
+    background: white;
+}
+
+#div {
+    font-size: 30px;
+    position: relative;
+    width: 740px;
+    height: 800px;
+    margin: 0 auto;
+    background: white;
+}
+
+#store {
+    position: absolute;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+#bookId {
+    position: absolute;
+    font-size: 35px;
+    left: 300px;
+    top: 15px;
+}
+
+#user {
+    position: absolute;
+    font-size: 20px;
+    margin-left: 40px;
+    margin-top: 70px;
+}
+
+#userName {
+    position: absolute;
+    font-size: 35px;
+    left: 300px;
+    top: 65px;
+}
+
+
+/*#email {
+    position: absolute;
+    font-size: 20px;
+    margin-top: 120px;
+    margin-left: 40px;
+}*/
+
+#emailAddress {
+    position: absolute;
+    font-size: 35px;
+    left: 300px;
+    top: 115px;
+}
+
+
+/*#password {
+    position: absolute;
+    font-size: 20px;
+    margin-top: 175px;
+    margin-left: 40px;
+}*/
+
+#pass {
+    position: absolute;
+    font-size: 35px;
+    left: 300px;
+    top: 165px;
+}
+
+#confirm {
+    position: absolute;
+    font-size: 20px;
+    margin-top: 225px;
+    margin-left: 40px;
+}
+
+#confirmPass {
+    position: absolute;
+    font-size: 35px;
+    left: 300px;
+    top: 215px;
+}
+
+input {
+    float: none;
+}
+
+.btn {
+    padding: 2px 12px;
+    width: 200px;
+    height: 40px;
+    margin-left: 25px
+}
+
+.btn-info {
+    width: 200px;
+}
+
+
+/* -- Navigation Bar -- */
+
+#btnLogout {
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 30px 60px 30px;
+    display: inline-block;
+}
+
+#btnLogout:hover,
+#btnLogout:active {
+    color: #f9a4a7;
+    text-align: center;
+    padding: 60px 30px 60px 30px;
+    display: inline-block;
+}
+
+#btnHome {
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 30px 60px 30px;
+    display: inline-block;
+    margin-left: 100px;
+}
+
+#btnHome:hover,
+#btnHome:active {
+    color: #f9a4a7;
+    text-align: center;
+    padding: 60px 30px 60px 30px;
+    display: inline-block;
+}
+
+#joinNetty {
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 30px 60px 30px;
+    display: inline-block;
+}
+
+#joinNetty:hover,
+#joinNetty:active {
+    color: #f9a4a7;
+    text-align: center;
+    padding: 60px 30px 60px 30px;
+    display: inline-block;
+}
+
+#progress {
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 30px 60px 30px;
+    display: inline-block;
+}
+
+#progress:hover,
+#progress:active {
+    color: #f9a4a7;
+    text-align: center;
+    padding: 60px 30px 60px 30px;
+    display: inline-block;
+}
+
+
+/* -- Activity Information -- */
+
+.modal-content {
+    background-color: white;
+}
+
+.modal.fade .modal-dialog {
+    width: fit-content;
+}
+
+.activityList {
+    margin-bottom: 120px;
+}
+
+.activity {
+    border: whitesmoke solid 3px;
+    background-color: peachpuff;
+    height: 100px;
+    font-size: 30px;
+    padding: 60px;
+}
+
+.activity:hover {
+    background-color: teal;
+    cursor: pointer;
+}
+
+.activityImg {
+    margin-right: 20px;
+}
+
+.locked {
+    background-color: grey;
+    /*pointer-events: disable;*/
+}
+
+.locked:hover {
+    cursor: not-allowed;
+    background-color: grey;
+}
+
+.subBtn {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 150px;
+}
+
+
+/*Home information*/
+
+.info-home {
+    border: whitesmoke solid 3px;
+    background-color: #ffffff;
+    height: 100px;
+    font-size: 60px;
+    margin-top: 400px;
+}
+
+.logoTop {
+    float: left;
+    margin-top: 35px;
+    margin-left: 100px;
+    width: 300px;
+    height: 140px;
+}
+
+.character {
+    text-align: center;
+}
+
+.info-about {
+    border-radius: 30px;
+    background: #81cbec;
+    background-repeat: no-repeat;
+    color: black;
+    padding: 20px;
+    margin-right: 100px;
+    margin-left: 100px;
+    font-size: 50px;
+}
+
+.inside-about {
+    border-radius: 0px 0px 25px 25px;
+    background: lavender;
+    background-repeat: no-repeat;
+    color: black;
+    padding: 20px;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 50px;
+}
+
+.landing-about {
+    border-radius: 0px 0px 25px 25px;
+    background-repeat: no-repeat;
+    color: #81cbec;
+    padding: 20px;
+    margin-right: 290px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.main-about {
+    border-radius: 0px 0px 25px 25px;
+    background-repeat: no-repeat;
+    color: black;
+    padding: 20px;
+    font-size: 50px;
+}
+
+.activity-about {
+    border-radius: 25px;
+    background: #9de659;
+    background-repeat: no-repeat;
+    color: black;
+    padding: 10px;
+    /*height: 470px;*/
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 50px;
+}
+
+.netty-about {
+    border-radius: 25px;
+    background: #9de659;
+    background-repeat: no-repeat;
+    color: black;
+    padding: 20px;
+    height: 470px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 50px;
+}
+
+
+/*.btnStranger {
+    /*background-image: url("../images/StrangerDanger_Button.JPG");
+    border: none;
+    height: 285px;
+    width: 240px;
+}*/
+
+
+/* -- Progress Page -- */
+
+.incomplete {
+    background-color: #f7c88c;
+    margin-top: 10px;
+    padding: 35px;
+    color: white;
+}
+
+.complete {
+    background-color: #bdd80e;
+    margin-top: 10px;
+    padding: 35px;
+    color: white;
+}
+
+
+/* -- -- */
+
+
+/* -- Navbar -- */
+
+.navBar {
+    background: #81cbec;
+    height: 100px;
+}
+
+.navbar-default {
+    border-color: #81cbec;
+}
+
+.home::before,
+.info::before {
+    color: white;
+    font-size: 65px;
+    margin-left: 60px;
+    margin-right: 100px;
+}
+
+.login::before,
+.user::before {
+    color: white;
+    font-size: 65px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.inputs {
+    font-size: 40px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+
+#content {
+    text-align: center;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+
+/* -- Activities -- */
+
+#quiz {
+    margin-left: 2px;
+    padding: 10px 20px 10px 20px;
+    width: 100%;
+    font-size: 35px;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+#textbox {
+    height: 45px;
+    font-size: 26px;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+#button {
+    background: green;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    color: white;
+    font-size: 16px;
+    transition-duration: .5s;
+    margin-top: 15px;
+}
+
+#button:hover {
+    background: white;
+    border: 1px solid green;
+    color: black;
+    cursor: pointer;
+}
+
+#after_submit {
+    visibility: hidden;
+}
+
+#mc {
+    width: 25px;
+    height: 25px;
+}
+
+.questions {
+    color: #9de659;
+}
+
+.jumbotron p {
+    font-size: 40px;
+}
+
+.jumbotron h1 {
+    font-size: 40px;
+}
+
+.interact {
+    background-color: blueviolet;
+    border-radius: 10px;
+}
+
+.meet {
+    background-color: green;
+}
+
+.mask {
+    background-color: tomato;
+    border-radius: 20px;
+}
+
+#true,
+#false {
+    display: inline-block;
+}
+
+.internet {
+    background-color: indianred;
+}
+
+
+/* -- Media Queries -- */
+
+
+/*@media (min-width: 768px) {
+    .modal-sm {
+        width: 700px;
+    }
+}*/
+
+
+/* Extra small devices (phones, 600px and down) */
+
+
+/*@media only screen and (max-width: 600px) {
+    .jumbotron p {
+        font-size: 11px;
+    }
+    .info-about {
+        border-radius: 5px;
+        background: #81cbec;
+        background-repeat: no-repeat;
+        color: black;
+        padding: 5px;
+        margin-right: 35px;
+        margin-left: 35px;
+    }
+    .inside-about {
+        border-radius: 0px 0px 25px 25px;
+        background: lavender;
+        background-repeat: no-repeat;
+        color: black;
+        padding: 20px;
+        margin-top: auto;
+        margin-right: 1px;
+        margin-left: 1px;
+        font-size: 11px;
+    }
+    .logoTop {
+        float: left;
+        margin-top: 25px;
+        margin-left: 20px;
+        width: 120px;
+        height: 40px;
+    }
+}*/
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+
+/*@media only screen and (min-width: 600px) {}*/
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+
+/*@media only screen and (min-width: 768px) {
+    .jumbotron p {
+        font-size: 18px;
+    }
+    
+}*/
+
+
+/* Large devices (laptops/desktops, 992px and up) 
+
+@media only screen and (min-width: 992px) {}*/
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) 
+
+@media only screen and (min-width: 1200px) {}*/

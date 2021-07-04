@@ -1,0 +1,389 @@
+<!-- Page has now become redundant as of Aug 05 2020 -->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>KID Friendly- Activities</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Internet safety tool for parents" />
+    <meta name="keywords" content="internet safety, children, strangers, advice, information, cyber bullying" />
+
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="styles/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="styles/icomoon.css">
+    <!-- Themify Icons-->
+    <link rel="stylesheet" href="styles/themify-icons.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="styles/bootstrap.css">
+
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="styles/owl.carousel.min.css">
+    <link rel="stylesheet" href="styles/owl.theme.default.min.css">
+
+    <!-- Theme styles  -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="styles/StyleSheet.css" rel="stylesheet" />
+
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+ 
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+    apiKey: "AIzaSyBgO9w0fHIK2mB7oCD1O4bIe_LvA76Ov_w",
+    authDomain: "cybernetty-df98a.firebaseapp.com",
+    projectId: "cybernetty-df98a",
+    databaseURL:'https://cybernetty-df98a-default-rtdb.firebaseio.com',
+    storageBucket: "cybernetty-df98a.appspot.com",
+    messagingSenderId: "480836825199",
+    appId: "1:480836825199:web:2b95733fec458f4c8b5d9a",
+    measurementId: "G-CGEQ7VM9T9"
+  };
+        firebase.initializeApp(config);
+    </script>
+
+ 
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118121632-1');
+    </script>
+
+</head>
+
+<body onload="setUpListeners()">
+
+    <div class="gtco-loader"></div>
+
+    <div id="page">
+
+        <nav class="gtco-nav" role="navigation">
+            <div class="gtco-container">
+
+                <div class="row">
+                    <div class="col-sm-2 col-xs-12">
+                        <div id="gtco-logo">
+                            <a href="index.html">KID Friendly</div>
+                    </div>
+                    <div class="col-xs-10 text-right menu-1">
+                        <ul>
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="page-about.html">About KID Friendly</a>
+                            </li>
+                            <li id="loggedIn" class="has-dropdown">
+                                <a href="#">Parent Dashboard</a>
+                                <ul class="dropdown">
+                                    <li><a id="create" href="page-create-activities.html">Create Activity</a></li>
+                                    <li>
+                                        <a id="progress" href="page-progress.html">Progress</a>
+                                    </li>
+                                    <li>
+                                        <a id="activities" href="page-activities.html">Activities</a>
+                                    </li>
+                                    <li>
+                                        <a id="btnLogout" href="index.html">Log Out</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a id="joinNetty" class="join hide" href="page-authenticate.html">Join Friendly</a>
+                            </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+        </nav>
+
+        <div class="gtco-section">
+            <div class="gtco-container">
+                <div id="home" class="info-about">
+                    <div class="row gtco-heading">
+                        <div class="col-md-4 text-center">
+                            <img src="images/netty-activities.png" alt="netty" />
+                        </div>
+                        <div class="col-md-8 activityDesc">
+                            <div id="userGreeting"></div>
+                            <p class="para">Complete a selection of activities to learn about the internet. Click the links to read some information, provided by Netty, then complete the activity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row layers">
+            <!-- Stranger Danger -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="feature-left">
+                    <!--<i class="ti-briefcase icon"></i>-->
+                    <div class="copy">
+                        <h3>Stranger Danger</h3>
+                        <p>Strangers exist online and offline. Click below to prepare your child for strangers online.</p>
+                        <p>
+                            <button id="a1" type="button activity-1" class="btn btn-info" data-toggle="modal" data-target="#Activity1">Learn more</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- The Internet -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="feature-left">
+                    <!--<i class="ti-package icon"></i>-->
+                    <div class="copy">
+                        <h3>The Internet</h3>
+                        <p>What is the internet? Does your child know? Click below to find out.</p>
+                        <p>
+                            <button id="a2" type="button activity-2" class="btn btn-info" data-toggle="modal" data-target="#Activity2">Learn more</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix visible-sm-block"></div>
+            <!-- Sharing -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="feature-left">
+                    <!--<i class="ti-brush-alt icon"></i>-->
+                    <div class="copy">
+                        <h3>Sharing</h3>
+                        <p>What is appropriate for your child to share online? Click below to learn more.</p>
+                        <p>
+                            <button id="a3" type="button activity-3" class="btn btn-info" data-toggle="modal" data-target="#Activity3">Learn more</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix visible-md-block"></div>
+            <!-- Personal Information -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="feature-left">
+                    <!--<i class="ti-home icon"></i>-->
+                    <div class="copy">
+                        <h3>Personal Information</h3>
+                        <p>Our personal information is our identity. Click below to find out how to protect your child's identity.</p>
+                        <p>
+                            <button id="a4" type="button activity-4" class="btn btn-info" data-toggle="modal" data-target="#Activity4">Learn more</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix visible-sm-block"></div>
+            <!-- Cyber Bullying -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="feature-left">
+                    <!--<i class="ti-notepad icon"></i>-->
+                    <div class="copy">
+                        <h3>Cyber Bullying</h3>
+                        <p>What is cyber bullying? Click below to learn about cyber bullying.</p>
+                        <p>
+                            <button id="a5" type="button activity-5" class="btn btn-info" data-toggle="modal" data-target="#Activity5">Learn more</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Parent Activities -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="feature-left">
+                    <!--<i class="ti-plug icon"></i>-->
+                    <div class="copy">
+                        <h3>Parent Activities</h3>
+                        <p>Click below to complete an activity created by your parents.</p>
+                        <p>
+                            <button class="btn btn-info" onclick="ParentActivity()">Learn more</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- Services -->
+
+    <!-- Activity 1 -->
+    <div class="modal fade" id="Activity1" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div>
+                <div>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                
+                <img src="images/Stranger_Danger.png" />
+              
+            </div>
+        </div>
+    </div>
+
+    <!-- Activity 2 -->
+    <div class="modal fade" id="Activity2" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div>
+                <div>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+             
+
+                <img src="images/The_Internet.png" />
+               
+            </div>
+        </div>
+    </div>
+
+    <!-- Activity 3 -->
+    <div class="modal fade" id="Activity3" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div>
+                <div>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                </div>
+                
+
+                <img src="images/Sharing.png" />
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Activity 4 -->
+    <div class="modal fade" id="Activity4" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div>
+                <div>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                </div>
+                <!--<div class="modal-body">-->
+
+                <img src="images/Personal_Information.png" />
+               
+            </div>
+        </div>
+    </div>
+
+    <!-- Activity 5 -->
+    <div class="modal fade" id="Activity5" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div>
+                <div>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                </div>
+               
+
+                <img src="images/Cyber_Bullying.png" />
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- END  -->
+
+    <footer id="gtco-footer" class="gtco-section" role="contentinfo">
+        <div class="gtco-container">
+            <div class="row row-pb-md">
+                <div class="col-md-4 gtco-widget gtco-footer-paragraph">
+                    <h3>KID Friendly</h3>
+                    <p>Bridging the gap between parents, children and the internet. Helping raise internet safety awareness.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-6 gtco-footer-link">
+                            <h3>Links</h3>
+                            <ul class="gtco-list-link">
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="page-about.html">About</a>
+                                </li>
+                                <li>
+                                    <a href="cyberbullying.html">Cyber Bullying</a>
+                                </li>
+                    
+                                <li>
+                                    <a href="tipsandadvice.html">Tips for Parents</a>
+                                </li>
+                                <li>
+                                    <li>
+                                        <a href="page-activities.html">Activities</a>
+                                    </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 gtco-footer-subscribe">
+                    <div class="item">
+                        <div class="gtco-staff">
+                            <ul class="fh5co-social">
+                                <li><a href="#"><i class="icon-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/SuryaPr09062449"><i class="icon-twitter"></i></a></li>
+                                <li><a href="#"><i class="icon-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gtco-copyright">
+            <div class="gtco-container">
+                <div class="row">
+                    <div class="col-md-6 text-left">
+                        <p>
+                            <small>&copy; Copyright 2021</small>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- END footer -->
+
+    </div>
+
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop">
+            <i class="icon-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery Easing -->
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Waypoints -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <!-- Carousel -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Main -->
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/database.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
+    <script type="text/javascript" src="js/activities.js"></script>
+    <script type="text/javascript" src="js/page-activities.js"></script>
+
+</body>
+
+</html>

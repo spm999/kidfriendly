@@ -1,0 +1,219 @@
+<!-- Page has now become redundant as of Aug 05 2020 -->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>KID Friendly - Authenticate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Internet safety tool for parents" />
+    <meta name="keywords" content="internet safety, children, strangers, advice, information, cyber bullying" />
+
+    <!-- Favicon and Shortcut -->
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="styles/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="styles/icomoon.css">
+    <!-- Themify Icons-->
+    <link rel="stylesheet" href="styles/themify-icons.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="styles/bootstrap.css">
+
+    <!-- Carousel  -->
+    <link rel="stylesheet" href="styles/owl.carousel.min.css">
+    <link rel="stylesheet" href="styles/owl.theme.default.min.css">
+
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+  
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+    apiKey: "AIzaSyBgO9w0fHIK2mB7oCD1O4bIe_LvA76Ov_w",
+    authDomain: "cybernetty-df98a.firebaseapp.com",
+    databaseURL:'https://cybernetty-df98a-default-rtdb.firebaseio.com',
+    projectId: "cybernetty-df98a",
+    storageBucket: "cybernetty-df98a.appspot.com",
+    messagingSenderId: "480836825199",
+    appId: "1:480836825199:web:2b95733fec458f4c8b5d9a",
+    measurementId: "G-CGEQ7VM9T9"
+  };
+        firebase.initializeApp(config);
+    </script>
+
+    <!-- Firebase AuthUI -->
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+    <script type="text/javascript">
+        // FirebaseUI config.
+        var uiConfig = {
+            signInSuccessUrl: 'index.html',
+            signInOptions: [
+                // Leave the lines as is for the providers you want to offer your users.
+                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                firebase.auth.EmailAuthProvider.PROVIDER_ID
+            ],
+            // Terms of service url.
+            tosUrl: ''
+        };
+
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+        // The start method will wait until the DOM is loaded.
+        ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118121632-1');
+    </script>
+
+</head>
+
+<body>
+
+    <div class="gtco-loader"></div>
+
+    <div id="page">
+
+        <nav class="gtco-nav" role="navigation">
+            <div class="gtco-container">
+
+                <div class="row">
+                    <div class="col-sm-2 col-xs-12">
+                        <div id="gtco-logo"><a href="index.html">KID Friendly</div>
+					</div>
+					<div class="col-xs-10 text-right menu-1">
+						<ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="page-about.html">About KID Friendly</a></li>
+                            <li><a id="joinNetty" class="active" href="page-authenticate.html">Join Friendly</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+        </nav>
+
+        <div class="gtco-section">
+            <div class="gtco-container">
+                <div class="row gtco-heading">
+                    <div class="col-md-7 text-left">
+                        <h2>Join Friendly</h2>
+                        <div>
+                            <p>Hello there! Are you a parent/guardian introducing your child to the internet for the first time, and you're concerned about your child's safety on the internet? If so, why don't you come join Netty on a quest to complete activities
+                                and prepare you and your child with helpful tips and advice?</p>
+                            <p>Once you join, you will be introduced to the Parent Dashboard. Here you can create personalised activities for your child as well as view your child's Progress.</p>
+                            <p>Your child can complete a series of educational activities such as "Stranger Danger", which provides information about the ways some people may take advantage of the internet and your child can choose other activities too!
+                                All can be found in the Activities section.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-md-push-2 text-left">
+                        <div class="authentication" id="firebaseui-auth-container"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="gtco-footer" class="gtco-section" role="contentinfo">
+            <div class="gtco-container">
+                <div class="row row-pb-md">
+                    <div class="col-md-4 gtco-widget gtco-footer-paragraph">
+                        <h3>KID Friendly</h3>
+                        <p>Bridging the gap between parents, children and the internet. Helping raise internet safety awareness.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-6 gtco-footer-link">
+                                <h3>Links</h3>
+                                <ul class="gtco-list-link">
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="page-about.html">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="cyberbullying.html">Cyber Bullying</a>
+                                    </li>
+            
+                                    <li>
+                                        <a href="tipsandadvice.html">Tips for Parents</a>
+                                    </li>
+                                    <li>
+                                        <li>
+                                            <a href="page-activities.html">Activities</a>
+                                        </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gtco-footer-subscribe">
+                        <div class="item">
+                            <div class="gtco-staff">
+                                <ul class="fh5co-social">
+                                    <li><a href="#"><i class="icon-facebook"></i></a></li>
+                                    <li><a href="https://twitter.com/SuryaPr09062449"><i class="icon-twitter"></i></a></li>
+                                    <li><a href="#"><i class="icon-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gtco-copyright">
+                <div class="gtco-container">
+                    <div class="row">
+                        <div class="col-md-6 text-left">
+                            <p><small>&copy; Copyright 2021</small></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- END footer -->
+
+        </div>
+
+        <div class="gototop js-top">
+            <a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+        </div>
+
+        <!-- jQuery -->
+        <script src="js/jquery.min.js"></script>
+        <!-- jQuery Easing -->
+        <script src="js/jquery.easing.1.3.js"></script>
+        <!-- Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Waypoints -->
+        <script src="js/jquery.waypoints.min.js"></script>
+        <!-- Carousel -->
+        <script src="js/owl.carousel.min.js"></script>
+
+        <!-- Main -->
+        <script src="js/main.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/activities.js"></script>
+
+</body>
+
+</html>

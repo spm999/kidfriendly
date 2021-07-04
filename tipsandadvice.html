@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>KID Friendly - Tips for Parents</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Internet safety tool for parents" />
+    <meta name="keywords" content="internet safety, children, strangers, advice, information, cyber bullying" />
+
+    <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="styles/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="styles/icomoon.css">
+    <!-- Themify Icons-->
+    <link rel="stylesheet" href="styles/themify-icons.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="styles/bootstrap.css">
+
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="styles/owl.carousel.min.css">
+    <link rel="stylesheet" href="styles/owl.theme.default.min.css">
+
+    <!-- Theme styles  -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="styles/StyleSheet.css" rel="stylesheet" />
+
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+   
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-database.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+    // apiKey: "AIzaSyBgO9w0fHIK2mB7oCD1O4bIe_LvA76Ov_w",
+    // authDomain: "cybernetty-df98a.firebaseapp.com",
+    // projectId: "cybernetty-df98a",
+    // databaseURL:'https://cybernetty-df98a-default-rtdb.firebaseio.com',
+    // storageBucket: "cybernetty-df98a.appspot.com",
+    // messagingSenderId: "480836825199",
+    // appId: "1:480836825199:web:2b95733fec458f4c8b5d9a",
+    // measurementId: "G-CGEQ7VM9T9"
+    apiKey: "AIzaSyBgO9w0fHIK2mB7oCD1O4bIe_LvA76Ov_w",
+    authDomain: "cybernetty-df98a.firebaseapp.com",
+    databaseURL: "https://cybernetty-df98a-default-rtdb.firebaseio.com",
+    projectId: "cybernetty-df98a",
+    storageBucket: "cybernetty-df98a.appspot.com",
+    messagingSenderId: "480836825199",
+    appId: "1:480836825199:web:2b95733fec458f4c8b5d9a",
+    measurementId: "G-CGEQ7VM9T9"
+  };
+        firebase.initializeApp(config);
+    </script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-118121632-1');
+    </script>
+
+</head>
+
+<body onload="setUpListeners()" style="font-size:medium">
+
+    <div class="gtco-loader"></div>
+
+    <div id="page">
+
+        <nav class="gtco-nav" role="navigation">
+            <div class="gtco-container">
+
+                <div class="row">
+                    <div class="col-sm-2 col-xs-12">
+                        <div id="gtco-logo">
+                            <a href="index.html">KID Friendly</div>
+                    </div>
+                    <div class="col-xs-10 text-right menu-1">
+                        <ul>
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="page-about.html">About KID Friendly</a>
+                            </li>
+                            <li id="loggedIn" class="has-dropdown">
+                                <a href="#">Parent Dashboard</a>
+                                <ul class="dropdown">
+                                    <li><a id="create" href="page-create-activities.html">Create Activity</a></li>
+                                    <li>
+                                        <a id="progress" href="page-progress.html">Progress</a>
+                                    </li>
+                                    <li>
+                                        <a id="activities" href="page-activities.html">Activities</a>
+                                    </li>
+                                    <li>
+                                        <a id="btnLogout" href="index.html">Log Out</a>
+                                    </li>
+                                </ul>
+                            </li>
+                          
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+        </nav>
+
+        <div class="gtco-section">
+            <div class="gtco-container">
+                <div class="row gtco-heading">
+                    <div class="col-md-12 text-left">
+                        <h2>Tips for Parents</h2>
+                        <div class="feature-left">
+                            <i class="fa fa-book icon"></i>
+                            <div class="copy">
+                                <h3>General Rules for Parents</h3>
+                                <ul>
+                                    <li>Educate yourself about the internet first.</li>
+                                    <li>Teach your child the obvious identity rules.</li>
+                                    <li>Know the dangers associated with sites your children frequent.</li>
+                                    <li>Understand not everything online is true.</li>
+                                    <li>Check age ratings for games.</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="feature-left">
+                            <i class="fa fa-group icon"></i>
+                            <div class="copy">
+                                <h3>Social Media</h3>
+                                <ul>
+                                    <li>Get to know your child's online friends.</li>
+                                    <li>Teach your child what to do if they encounter a stranger online.</li>
+                                    <li>Know how to report problems on social media.</li>
+                                    <li>Know how to block unwanted communication.</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="feature-left">
+                            <i class="fa fa-laptop icon"></i>
+                            <div class="copy">
+                                <h3>Screen Time</h3>
+                                <ul>
+                                    <li>Set up rules for using the computer and the internet.</li>
+                                    <li>Set expectations and time-limits.</li>
+                                    <li>Keep your computer in a communal area of the house.</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="feature-left">
+                            <i class="fa fa-shield icon"></i>
+                            <div class="copy">
+                                <h3>Security</h3>
+                                <ul>
+                                    <li>Never let your child give out personal information.</li>
+                                    <li>Check the websites and services that your child uses.</li>
+                                    <li>Install an internet filter or family safety software.</li>
+                                    <li>Make sure you have an anti-virus program installed.</li>
+                                    <li>Check security settings are in place.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- END  -->
+
+        <div class="gtco-section gto-features">
+            <div class="gtco-container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="feature-left">
+                            <i class="fa fa-ban icon"></i>
+                            <div class="copy info-links">
+                                <h3>Cyber Bullying</h3>
+                                <p>Learn more about cyber bullying, how to prevent your child from being bullied online, and what to do if your child is being cyber bullied.</p>
+                                <p>
+                                    <a href="cyberbullying.html" class="gtco-more">Continue Reading..</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                 
+                    <div class="col-md-4">
+                        <div class="feature-left">
+                            <i class="fa fa-check-square-o icon"></i>
+                            <div class="copy info-links">
+                                <h3>Tips for Parents</h3>
+                                <p>The Internet is a wonderful resource, but access to it has its hazards for kids. Here's how to make sure your kids go online safely.</p>
+                                <p>
+                                    <a href="tipsandadvice.html" class="gtco-more">Continue Reading..</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="gtco-footer" class="gtco-section" role="contentinfo">
+            <div class="gtco-container">
+                <div class="row row-pb-md">
+                    <div class="col-md-4 gtco-widget gtco-footer-paragraph">
+                        <h3>KID Friendly</h3>
+                        <p>Bridging the gap between parents, children and the internet. Helping raise internet safety awareness.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-6 gtco-footer-link">
+                                <h3>Links</h3>
+                                <ul class="gtco-list-link">
+                                    <li>
+                                        <a href="index.html">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="page-about.html">About</a>
+                                    </li>
+                                    <li>
+                                        <a href="cyberbullying.html">Cyber Bullying</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="tipsandadvice.html">Tips for Parents</a>
+                                    </li>
+                                    <li>
+                                        <li>
+                                            <a href="page-activities.html">Activities</a>
+                                        </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 gtco-footer-subscribe" >
+                        <!-- Font awesome icons -->
+                        <a href="#" class="fa fa-facebook" ></a>
+                        <a href="https://twitter.com/SuryaPr09062449" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+
+                     
+                    </div>
+                </div>
+            </div>
+            <div class="gtco-copyright">
+                <div class="gtco-container">
+                    <div class="row">
+                        <div class="col-md-6 text-left">
+                            <p>
+                                <small>&copy; Copyright 2021</small>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- END footer -->
+
+        </div>
+
+        <div class="gototop js-top">
+            <a href="#" class="js-gotop">
+                <i class="icon-arrow-up"></i>
+            </a>
+        </div>
+
+        <!-- jQuery -->
+        <script src="js/jquery.min.js"></script>
+        <!-- jQuery Easing -->
+        <script src="js/jquery.easing.1.3.js"></script>
+        <!-- Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Waypoints -->
+        <script src="js/jquery.waypoints.min.js"></script>
+        <!-- Carousel -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- Main -->
+        <script src="js/main.js"></script>
+
+</body>
+
+</html>
